@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contect">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>                
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Patna, India <a href="https://www.google.com/maps/place/Patna,+Bihar"><i class="fa-solid fa-location-dot"></i></a></p>
+                <h1>Hi, I'm <span class="name-color">Ganesh Raj</span><br> I am Developer & <span id="element"></span></h1>
+            </div>
+        </div> 
+    </div>
+   <!--------------about------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="rauni.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a Web Developer with a passion for creating and developing interactive and responsive web applications. My passion for clean code and continuous learning drives me to create impactful digital solutions.I'm excited to contribute my skills to impactful projects and to continue growing as a developer.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('languges')">Languges</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>Web Designing</li>
+                            <li>Graphic Design</li>
+                            <li>Video Editing</li>
+                        </ul>
+                    </div> 
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>Patliputra University, Patna, Bihar</li>
+                            <li>College of commerce arts and science</li>
+                            <li>bachelor of Science in Information Technology</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="languges">
+                        <ul>
+                            <li>Hindi</li>
+                            <li>English</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------portfolio--------------------- -->
+    <div id="work">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work-3.png">
+                    <div class="layer">
+                        <h3>Amazone Clone</h3>
+                        <p>This website is for entertainment only</p>
+                        <a href="https://amazon-rauni.netlify.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="2.png">
+                    <div class="layer">
+                        <h3>Amazone Clone</h3>
+                        <p>This website is for entertainment only</p>
+                        <a href="https://amazon-rauni.netlify.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="3.png">
+                    <div class="layer">
+                        <h3>Amazone Clone</h3>
+                        <p>This website is for entertainment only</p>
+                        <a href="https://amazon-rauni.netlify.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/ganeshraj92" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- -------------contect------------- -->
+
+    <div id="contect">
+        <div class="container">
+            <div class="row">
+                <div class="contect-left">
+                    <h1 class="sub-title">Contect Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>ganeshraj00987@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/ganeshraj92"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/alex_rauni/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ganesh-raj-a60059332/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/rauni.parjapati"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                    <a href="cv.pdf" download class="btn btn2">Downlod CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Ganesh <i class="fa-solid fa-heart"></i></p> 
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['video editor', 'Graphic Designer','Web Designer'],
+      typeSpeed: 70,
+    });
+  </script>
+
+  <script>
+
+    var sidemeu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemeu.style.right = "0"
+    }
+
+    function closemenu(){
+        sidemeu.style.right = "-200px"
+    }
+    </script>
+   <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyqPwD3RkZQIT9dnrWMIfyUDfOdIb9h9dlLE13dWq6EDdbtlSxEI8-yMQ6wLOuAR6EC/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
